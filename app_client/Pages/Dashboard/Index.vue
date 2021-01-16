@@ -4,7 +4,7 @@
       <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
           <div class="p-6 bg-white border-b border-gray-200">
-            {{ __("You're logged in!") }}
+            <XLink href="/framework/step1">Use the framework</XLink>
           </div>
         </div>
       </div>
@@ -13,12 +13,15 @@
 </template>
 
 <script>
+import XLink from '../../Apex/Buttons/XLink.vue';
 import PageLayout from "../../Layouts/PageLayout.vue";
+
 
 export default {
   name: "DashboardIndex",
   components: {
     PageLayout,
+    XLink
   },
   setup() {
     return {

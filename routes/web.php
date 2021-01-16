@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\DashboardIndexController;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +15,6 @@ use App\Http\Controllers\DashboardIndexController;
 |
 */
 
-Route::get('/', DashboardIndexController::class)->name('dashboard');
+Route::get('/', fn () => Inertia::render('Dashboard/Index'))->name('dashboard');
+
+Route::get('/framework/step1', fn () => Inertia::render('UseFramework/Index'));
