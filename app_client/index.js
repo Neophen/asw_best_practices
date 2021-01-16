@@ -3,6 +3,7 @@ import { App, plugin } from "@inertiajs/inertia-vue3";
 import "./index.css";
 
 import StaticLayout from "./Layouts/StaticLayout.vue";
+import { applyDirectivesToApp } from "./composables/useDirectives";
 
 const el = document.getElementById("app");
 
@@ -25,19 +26,6 @@ const app = createApp({
 
 app.config.globalProperties.__ = (key) => key;
 
-app.directive("click-outside", {
-  beforeMount(el, binding) {
-    el.clickOutsideEvent = function (event) {
-      if (!(el === event.target || el.contains(event.target))) {
-        binding.value(event, el);
-      }
-    };
-    document.body.addEventListener("click", el.clickOutsideEvent);
-  },
-  unmounted(el) {
-    document.body.removeEventListener("click", el.clickOutsideEvent);
-  },
-});
-
+applyDirectivesToApp(app);
 app.use(plugin);
 app.mount(el);

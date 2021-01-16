@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-100 min-h-screen">
+  <div class="bg-gray-100 min-h-screen" :data-test="dataTest">
     <div class="bg-white px-4 py-2">
       <h1 class="text-4xl font-bold">{{ title }}</h1>
     </div>
@@ -11,6 +11,10 @@
 export default {
   name: "PageLayout",
   props: {
+    dataTest: {
+      type: String,
+      default: "page",
+    },
     title: {
       type: String,
       default: "",
