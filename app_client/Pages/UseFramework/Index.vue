@@ -3,7 +3,7 @@
     <div class="bg-white px-4 py-2 flex space-x-8">
       <XLink href="/">Back</XLink>
       <h1 class="text-4xl font-bold">Use the framework</h1>
-      <XLink href="/framework/step2">Next</XLink>
+      <XLink href="/solid/step-1">Next</XLink>
     </div>
     <div class="p-12 md:flex items-start">
       <div class="flex-1 space-y-4">

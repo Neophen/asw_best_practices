@@ -10,8 +10,13 @@
 </template>
 
 <script>
+import XLink from "../../Apex/Buttons/XLink.vue";
+
 export default {
   name: "PageLayout",
+  components: {
+    XLink,
+  },
   props: {
     title: {
       type: String,

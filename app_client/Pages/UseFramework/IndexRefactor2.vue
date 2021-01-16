@@ -20,8 +20,6 @@
 
 <script>
 import { reactive, toRefs } from "vue";
-import XLink from "../../Apex/Buttons/XLink.vue";
-import XIcon from "../../Apex/Icons/XIcon.vue";
 import PageLayout from "../../Components/UseFramework/PageLayout.vue";
 import LegalLink from "../../Components/UseFramework/LegalLink.vue";
 import ContactBox from "../../Components/UseFramework/ContactBox.vue";
@@ -29,8 +27,6 @@ import ContactBox from "../../Components/UseFramework/ContactBox.vue";
 export default {
   name: "UseFrameworkIndex",
   components: {
-    XIcon,
-    XLink,
     // New
     PageLayout,
     LegalLink,

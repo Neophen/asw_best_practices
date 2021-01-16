@@ -18,3 +18,4 @@ use Inertia\Inertia;
 Route::get('/', fn () => Inertia::render('Dashboard/Index'))->name('dashboard');
 
 Route::get('/framework/step1', fn () => Inertia::render('UseFramework/Index'));
+Route::get('/solid/step-1', fn () => Inertia::render('Solid/Step1'));
